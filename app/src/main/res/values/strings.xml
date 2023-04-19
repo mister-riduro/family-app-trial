@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FamilyApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="beranda">Beranda</string>
+    <string name="keluarga">Keluarga</string>
+    <string name="profil">Profil</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="placeholder_nama">Fulan bin Fulan</string>
+    <string name="tentang_sumosari">Tentang Sumosari</string>
+    <string name="empty_my_family">Anda belum dimasukkan ke Keluarga manapun, silakan hubungi Admin.</string>
+    <string name="keluargamu">Keluargamu</string>
+    <string name="placeholder_family_name">Keluarga Fulan</string>
+    <string name="jumlah_anggota">Jumlah Anggota</string>
+    <string name="anggota_keluarga">Anggota Keluarga</string>
+    <string name="alert_search_feature_unavailable">Fitur search akan datang di kemudian hari ✌. Sementara silakan scroll dulu.</string>
+    <string name="semua_keluarga">Semua Keluarga</string>
+    <string name="wip_feature">Fitur sedang dikerjakan saat ini, harap bersabar.</string>
+</resources>

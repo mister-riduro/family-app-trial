@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "529785776504",
+    "project_id": "family-app-f30ae",
+    "storage_bucket": "family-app-f30ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529785776504:android:947d9b0aae5cbf7bc6c08d",
+        "android_client_info": {
+          "package_name": "com.example.familyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529785776504-2tc2nsqambu4m2om6etsaa6peuaou0m3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB92dlnkKPjBUuO3NWpBk6OpSgGIbjd2ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529785776504-2tc2nsqambu4m2om6etsaa6peuaou0m3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

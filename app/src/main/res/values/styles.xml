@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="HeadingH1" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_semi_bold</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="HeadingH2" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_semi_bold</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="HeadingH3" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_semi_bold</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="HeadingH4" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_semi_bold</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="TitleLarge" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_bold</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="TitleMedium" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_semi_bold</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="TitleSmall" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_semi_bold</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="ContentLarge" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_regular</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="ContentMedium" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_regular</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="ContentSmall" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_regular</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="Caption" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_regular</item>
+        <item name="android:fontFeatureSettings">liga 0</item>
+    </style>
+
+    <style name="VerticalDivider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/border_neutral</item>
+    </style>
+
+
+</resources>
