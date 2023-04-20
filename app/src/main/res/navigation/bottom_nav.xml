@@ -6,7 +6,7 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.familyapp.ui.HomeFragment"
+        android:name="com.example.familyapp.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/familyFragment"
-        android:name="com.example.familyapp.ui.FamilyFragment"
+        android:name="com.example.familyapp.ui.family.FamilyFragment"
         android:label="fragment_family"
         tools:layout="@layout/fragment_family" />
     <fragment

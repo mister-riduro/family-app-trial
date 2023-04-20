@@ -1,5 +1,7 @@
 package com.example.familyapp.data
 
+import com.example.familyapp.data.models.auth.AuthBody
+import com.example.familyapp.data.models.auth.AuthResponse
 import com.example.familyapp.data.models.ancestor.AncestorsResponse
 import com.example.familyapp.data.models.family.FamiliesResponse
 import com.example.familyapp.data.models.family.FamilyDetailResponse
@@ -7,7 +9,9 @@ import com.example.familyapp.data.models.role.RolesResponse
 import com.example.familyapp.data.models.user.UserDetailResponse
 import com.example.familyapp.data.models.user.UsersResponse
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -39,4 +43,9 @@ interface FamilyApi {
     suspend fun getAllAncestors(
         @Query("expand") expand: String
     ): Response<AncestorsResponse>
+
+    @POST("/api/collections/users/auth-with-password")
+    suspend fun authWithPassword(
+        @Body authBody: AuthBody
+    ): Response<AuthResponse>
 }

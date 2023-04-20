@@ -16,4 +16,15 @@
     <string name="alert_search_feature_unavailable">Fitur search akan datang di kemudian hari ✌. Sementara silakan scroll dulu.</string>
     <string name="semua_keluarga">Semua Keluarga</string>
     <string name="wip_feature">Fitur sedang dikerjakan saat ini, harap bersabar.</string>
+    <string name="placeholder_family_role">Peran Keluarga</string>
+    <string name="informasi_keluarga">Informasi Keluarga</string>
+    <string name="ayah">Ayah</string>
+    <string name="ibu">Ibu</string>
+    <string name="status_hidup">Hidup</string>
+    <string name="status">Status</string>
+    <string name="informasi_lainnya">Informasi Lainnya</string>
+    <string name="nomor_telepon">Nomor Telepon</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="meninggal">Meninggal</string>
+    <string name="hubungi_whatsapp">Hubungi Whatsapp</string>
 </resources>

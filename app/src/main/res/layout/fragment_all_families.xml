@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AllFamiliesFragment">
+    tools:context=".ui.family.AllFamiliesFragment">
 
     <LinearLayout
         android:id="@+id/layout_alert_search_feature"

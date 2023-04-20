@@ -4,8 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.familyapp.ui.AllFamiliesFragment
-import com.example.familyapp.ui.MyFamilyFragment
+import com.example.familyapp.ui.family.AllFamiliesFragment
+import com.example.familyapp.ui.family.MyFamilyFragment
 
 private const val NUM_TABS = 2
 

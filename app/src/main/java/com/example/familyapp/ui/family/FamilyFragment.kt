@@ -1,4 +1,4 @@
-package com.example.familyapp.ui
+package com.example.familyapp.ui.family
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

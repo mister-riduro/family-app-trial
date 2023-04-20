@@ -6,5 +6,5 @@ import com.google.gson.annotations.SerializedName
 
 data class RolesExpand(
     @SerializedName("user_id")
-    val userId: UserDetailResponse
+    val userId: RolesUserDetailResponse
 )

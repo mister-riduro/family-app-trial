@@ -1,14 +1,16 @@
 package com.example.familyapp.di
 
 import com.example.familyapp.data.FamilyApi
+import com.example.familyapp.repository.DefaultRepository
 import com.example.familyapp.util.Constant.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import javax.inject.Singleton
 
 // Containers for dependencies that live specific amount of time.
@@ -24,4 +26,8 @@ object AppModule {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(FamilyApi::class.java)
+
+//    @Singleton
+//    @Provides
+//    fun provideDefaultRepository(api: FamilyApi): Repository = DefaultRepository(api)
 }
