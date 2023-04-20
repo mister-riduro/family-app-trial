@@ -51,7 +51,7 @@ class FamilyMemberAdapter(): RecyclerView.Adapter<FamilyMemberAdapter.FamilyMemb
     override fun onBindViewHolder(holder: FamilyMemberViewHolder, position: Int) {
         val familyMember = differ.currentList[position]
         holder.itemView.apply {
-            val image = "https://pocket-first.pockethost.io/api/files/_pb_users_auth_/${familyMember.userId}/" + familyMember.rolesExpand.userId.avatar + "?token="
+            val image = "https://pocket-first.pockethost.io/api/files/_pb_users_auth_/${familyMember.userId}/${familyMember.rolesExpand.userId.avatar}?token="
             Picasso.get().load(image).into(binding.ivAvatar)
             binding.tvTag.text = familyMember.role
             binding.tvUsername.text = familyMember.rolesExpand.userId.name
@@ -64,11 +64,33 @@ class FamilyMemberAdapter(): RecyclerView.Adapter<FamilyMemberAdapter.FamilyMemb
                 Picasso.get().load(image).into(imageView)
 
                 bottomSheetView.findViewById<TextView>(R.id.tv_username).text = familyMember.rolesExpand.userId.name
-                bottomSheetView.findViewById<TextView>(R.id.tv_tag).text = familyMember.role
-                bottomSheetView.findViewById<TextView>(R.id.tv_ayah).text = familyMember.rolesExpand.userId.expand.fatherID.name
-                bottomSheetView.findViewById<TextView>(R.id.tv_ibu).text = familyMember.rolesExpand.userId.expand.motherID.name
+
+                if (familyMember.role.isEmpty()) {
+                    bottomSheetView.findViewById<TextView>(R.id.tv_tag).text = "Data Kosong"
+                } else {
+                    bottomSheetView.findViewById<TextView>(R.id.tv_tag).text = familyMember.role
+                }
+
+                if (familyMember.rolesExpand.userId.fatherId.isEmpty()) {
+                    bottomSheetView.findViewById<TextView>(R.id.tv_ayah).text = "Data Kosong"
+                } else {
+                    bottomSheetView.findViewById<TextView>(R.id.tv_ayah).text = familyMember.rolesExpand.userId.expand.fatherID.name
+                }
+
+                if(familyMember.rolesExpand.userId.motherId.isEmpty()) {
+                    bottomSheetView.findViewById<TextView>(R.id.tv_ibu).text = "Data Kosong"
+                } else {
+                    bottomSheetView.findViewById<TextView>(R.id.tv_ibu).text = familyMember.rolesExpand.userId.expand.motherID.name
+                }
+
                 bottomSheetView.findViewById<TextView>(R.id.tv_status).text = familyMember.rolesExpand.userId.status
-                bottomSheetView.findViewById<TextView>(R.id.tv_nomor_telepon).text = familyMember.rolesExpand.userId.phoneNumber
+
+                if(familyMember.rolesExpand.userId.phoneNumber.isEmpty()) {
+                    bottomSheetView.findViewById<TextView>(R.id.tv_nomor_telepon).text = "Tidak ada nomor telepon"
+                } else {
+                    bottomSheetView.findViewById<TextView>(R.id.tv_nomor_telepon).text = familyMember.rolesExpand.userId.phoneNumber
+                }
+
                 bottomSheetView.findViewById<TextView>(R.id.tv_tanggal_lahir).text = familyMember.rolesExpand.userId.bornDate
 
                 if(familyMember.rolesExpand.userId.dateDead.isEmpty()) {

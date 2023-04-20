@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.familyapp.data.preferences.Preferences
 import com.example.familyapp.databinding.FragmentMyFamilyBinding
 import com.example.familyapp.util.Resource
+import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -65,6 +66,8 @@ class MyFamilyFragment : Fragment() {
 
                     }
                     is Resource.Success -> {
+                        val image = "https://pocket-first.pockethost.io/api/files/lo7odjdjz2wdeay/${response.data?.id}/${response.data?.familyPhoto}?token="
+                        Picasso.get().load(image).into(binding?.ivFamilyPhoto)
                         binding?.tvFamilyName?.text = response.data?.familyName
                         binding?.tvFamilyDomicile?.text = response.data?.domicile
                         binding?.tvFamilyMember?.text = familyMember.toString() + " Anggota"

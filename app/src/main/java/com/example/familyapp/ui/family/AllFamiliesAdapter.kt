@@ -45,7 +45,8 @@ class AllFamiliesAdapter(): RecyclerView.Adapter<AllFamiliesAdapter.AllFamiliesV
     override fun onBindViewHolder(holder: AllFamiliesViewHolder, position: Int) {
         val families = differ.currentList[position]
         holder.itemView.apply {
-            Picasso.get().load(families.familyPhoto).into(binding.ivFamilyPhoto)
+            val image = "https://pocket-first.pockethost.io/api/files/lo7odjdjz2wdeay/${families.id}/${families.familyPhoto}?token="
+            Picasso.get().load(image).into(binding.ivFamilyPhoto)
             binding.tvFamilyName.text = families.familyName
             binding.tvDomicile.text = families.domicile
 
