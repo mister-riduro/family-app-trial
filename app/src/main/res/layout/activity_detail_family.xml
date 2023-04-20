@@ -128,7 +128,7 @@
                 style="@style/TitleSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/jumlah_anggota"
+                android:text="@string/domisili_keluarga"
                 android:textAlignment="center" />
 
             <TextView

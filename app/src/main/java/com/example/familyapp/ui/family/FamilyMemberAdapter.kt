@@ -1,11 +1,15 @@
 package com.example.familyapp.ui.family
 
+import android.content.Intent
+import android.net.Uri
 import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +19,7 @@ import com.example.familyapp.data.preferences.Preferences
 import com.example.familyapp.databinding.ItemFamilyMemberBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.squareup.picasso.Picasso
+import org.w3c.dom.Text
 
 class FamilyMemberAdapter(): RecyclerView.Adapter<FamilyMemberAdapter.FamilyMemberViewHolder>() {
     inner class FamilyMemberViewHolder(private val binding: ItemFamilyMemberBinding): RecyclerView.ViewHolder(binding.root)
@@ -85,10 +90,20 @@ class FamilyMemberAdapter(): RecyclerView.Adapter<FamilyMemberAdapter.FamilyMemb
 
                 bottomSheetView.findViewById<TextView>(R.id.tv_status).text = familyMember.rolesExpand.userId.status
 
+
+                val buttonWhatsapp = bottomSheetView.findViewById<Button>(R.id.button_contact_whatsapp)
                 if(familyMember.rolesExpand.userId.phoneNumber.isEmpty()) {
-                    bottomSheetView.findViewById<TextView>(R.id.tv_nomor_telepon).text = "Tidak ada nomor telepon"
+                    bottomSheetView.findViewById<TextView>(R.id.tv_nomor_telepon).text = "Data Kosong"
+                    buttonWhatsapp.visibility = View.GONE
                 } else {
-                    bottomSheetView.findViewById<TextView>(R.id.tv_nomor_telepon).text = familyMember.rolesExpand.userId.phoneNumber
+                    buttonWhatsapp.visibility = View.VISIBLE
+                    buttonWhatsapp.setOnClickListener {
+                        bottomSheetView.findViewById<TextView>(R.id.tv_nomor_telepon).text = familyMember.rolesExpand.userId.phoneNumber
+                        var parsedWhatsappNumber = familyMember.rolesExpand.userId.phoneNumber
+                        parsedWhatsappNumber.replaceFirst("0", "62")
+                        val intentWeb = Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/$parsedWhatsappNumber"))
+                        it.context.startActivity(intentWeb)
+                    }
                 }
 
                 bottomSheetView.findViewById<TextView>(R.id.tv_tanggal_lahir).text = familyMember.rolesExpand.userId.bornDate
